@@ -130,6 +130,8 @@ read_options(const char *fname)
                 }
             } else if (!strcasecmp(type, "alias")) {
                 set_alias_value(option, value);
+            } else if (!strcasecmp(type, "alias")) {
+                set_alias_value(option, value);
             } else if (!strcasecmp(type, "bind")) {
                 key_bind_action(key_action_id(option), key_from_str(value));
             } else if (!strcasecmp(type, "unbind")) {
