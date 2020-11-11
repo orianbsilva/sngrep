@@ -1385,8 +1385,8 @@ call_flow_column_add(ui_t *ui, const char *callid, address_t addr)
         char addr_port[1024];        
         sprintf(addr_port, "%s:%d", addr.ip, addr.port);
         strcpy(column->alias, get_alias_value(addr_port));
-        if(strcmp(column->alias, addr_port ))
-            strcpy(column->alias, get_alias_value(addr.ip));    
+        //if(strcmp(column->alias, addr_port ))
+        //    strcpy(column->alias, get_alias_value(addr.ip));    
     } else {
         strcpy(column->alias, get_alias_value(addr.ip));
     }
@@ -1414,8 +1414,8 @@ call_flow_column_get(ui_t *ui, const char *callid, address_t addr)
         char addr_port[1024];
         sprintf(addr_port, "%s:%d", addr.ip, addr.port);
         alias = get_alias_value(addr_port);
-        if(strcmp(alias, addr_port ))
-            strcpy(alias, get_alias_value(addr.ip));  
+        //if(strcmp(alias, addr_port ))
+        //    strcpy(alias, get_alias_value(addr.ip));  
     } else {
         alias = get_alias_value(addr.ip);
     }
